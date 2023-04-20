@@ -1,0 +1,83 @@
+body{
+    background-color: white;
+}
+
+header{    
+    text-align: center;      
+    font-size: 70px;
+    color: rgb(0, 10, 10);
+}
+
+nav{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.start-stop-button{      
+    height: 60px;
+    width: 120px;
+    border-radius: 10cm;
+    border-color: black;       
+    border-width: 5px;
+    border-style: solid;
+    background-color: black;
+    color: white;
+    font-size: large;
+    
+    
+}
+
+#Countdown{
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button_container{
+    text-align: center;
+}
+
+.game_square{
+    visibility: hidden;
+    height: 90px;
+    width: 250px;
+    background-color: black;
+    color: white; 
+    font-size: 30px; 
+    border-color: white; 
+    border-radius: 10cm;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.start-stop-button:hover{    
+    height: 60px;
+    width: 120px;
+    border-radius: 10cm;
+    border-color: black;
+    background-color: white;
+    color: black;
+    
+}
+
+.additionalContent{
+    display: flex;
+    padding: 90px;
+}
+
+.reactionStats{
+    visibility: hidden;
+    flex: 2;
+    border: 2px solid yellow;
+    margin-right: 45px;
+    border-radius: 1cm;
+}
+
+.options{
+    flex: 1;
+    border: 2px solid green;
+    margin-left: 45px;
+    border-radius: 1cm;
+}

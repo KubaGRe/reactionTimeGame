@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="game_script.js"></script>
+    </head>
+    <body>
+        <header>
+            🅣🅡🅨 🅨🅞🅤🅡 🅡🅔🅕🅛🅔🅧
+        </header>
+        <nav>
+            <button class="start-stop-button" onclick="startGame()">START</button>            
+        </nav>
+        <main>
+            <div class="button_container">
+                <button class="game_square" onclick="pushButton()" >
+                    PUSH ME
+                </button>
+
+                <div id="Countdown" >
+                    Prepare yourself, be fast
+                </div>
+            </div>            
+            <div class="additionalContent">
+                <div class="reactionStats">
+                    Actual reaction time: <p id="art">0.0</p>
+                    Avarage time: <p id="at">0.0</p>
+                    Best time: <p id="bt">0.0</p>
+                    Best time of all games: <p id="btoag">0.0</p>
+                </div>
+                <div class="options">
+                    Additional options
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+    
+</html>
