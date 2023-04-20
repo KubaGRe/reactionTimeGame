@@ -10,7 +10,7 @@ header{
 
 nav{
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -31,10 +31,14 @@ nav{
 #Countdown{
     font-size: 30px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 0px;
+    text-align: center;
+    padding: ;
 }
 
 .button_container{
     text-align: center;
+    height: 140px
 }
 
 .game_square{
@@ -64,20 +68,30 @@ nav{
 
 .additionalContent{
     display: flex;
-    padding: 90px;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 90px;
 }
 
-.reactionStats{
-    visibility: hidden;
+.reactionStats{  
+    font-size: 20px;
+    padding: 20px;    
+    visibility: visible;
     flex: 2;
-    border: 2px solid yellow;
+    background-color: black;
+    border: 2px solid black;
     margin-right: 45px;
     border-radius: 1cm;
+    color: white;
 }
 
-.options{
+.options{  
+    padding: 20px; 
+    font-size: 20px; 
+    color: white;
     flex: 1;
-    border: 2px solid green;
+    border: 2px solid black;
+    background-color: black;
     margin-left: 45px;
     border-radius: 1cm;
 }

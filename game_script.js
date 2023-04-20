@@ -64,9 +64,6 @@ async function countdown(doc){
         console.log(i);
         await delay(1000);
     }
-    
-    
-
 }
 
 
