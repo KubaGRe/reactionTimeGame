@@ -33,12 +33,12 @@ nav{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 0px;
     text-align: center;
-    padding: ;
+    
 }
 
 .button_container{
     text-align: center;
-    height: 140px
+    height: 180px
 }
 
 .game_square{
@@ -76,7 +76,7 @@ nav{
 .reactionStats{  
     font-size: 20px;
     padding: 20px;    
-    visibility: visible;
+    visibility: hidden;
     flex: 2;
     background-color: black;
     border: 2px solid black;

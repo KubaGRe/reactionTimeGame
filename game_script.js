@@ -5,48 +5,13 @@ var tries = 0;
 let i=0;
 var outcome = [];
 var bestTimeOfAllGames = Number.MAX_VALUE;
+var numberOfTries = 5;
+//let howManyTries = parseInt(prompt("How many tries?", "5"));
 
-// function testFunction(){
-//     if(doNothing == 0){
-//         doNothing = 1;
-//         console.log("Click!");
-//         console.log(isGameRunning);
-//         let start = document.getElementsByClassName("start-stop-button")[0];
-//         let doc = document.getElementById("Countdown");
-//         let gs = document.getElementsByClassName("game_square")[0];
-//         if(isGameRunning == false){ 
-         
-//             let i=5;        
-//             start.innerHTML = "STOP";        
-//             var count = setInterval(function(){
-//                 doc.innerHTML = i;
-//                 i = i - 1;
-//                 if (i < 0){
-//                     isGameRunning = true; 
-//                     clearInterval(count)
-//                     doc.style.visibility = 'hidden';
-//                     gs.style.visibility = 'visible';
-//                     doNothing = 0;
-                    
-//                     setTimeout(changeColor,rand());
-//                 }
-//             }, 1000)
-//         } 
-//         if(isGameRunning == true){
-//             start_button.innerHTML = "START";
-//             doc.style.visibility = 'visible';
-//             doc.innerHTML = "Prepare yourself, be fast"
-//             gs.style.visibility = 'hidden'; 
-//             isGameRunning = false;
-//             doNothing = 0;
-//         }}
-    
-    
-    
 
-// }
 
-function start(start_button, doc, gs){ 
+function start(start_button, doc, gs){
+    document.getElementsByClassName("reactionStats")[0].style.visibility = "hidden" 
     outcome = [];
     tries = 0;  
     start_button.innerHTML = "STOP"
@@ -81,7 +46,7 @@ function stop(){
 
 async function startGame(){
     if(doNothing == 1){        
-          
+        ;
         let start_button = document.getElementsByClassName("start-stop-button")[0];
         let doc = document.getElementById("Countdown");
         let gs = document.getElementsByClassName("game_square")[0];
@@ -132,7 +97,7 @@ function pushButton(){
         countAvarageTime();
         sendActualTime();
         sendBestTime();
-        if(tries == 4){
+        if(tries == numberOfTries - 1){
             stop(); 
             console.log(outcome);       
         }else{
@@ -161,25 +126,36 @@ function countAvarageTime(){
         sum = sum + outcome[i];
     }
     avarage = sum/i;
-    document.getElementById("at").innerHTML = avarage;
+    document.getElementById("at").innerHTML = avarage + " ms";
 }
 
 function sendBestTime(){
     let bestTime = Math.min.apply(Math, outcome);
-    document.getElementById("bt").innerHTML = bestTime;
+    document.getElementById("bt").innerHTML = bestTime + " ms";
     if(bestTime < bestTimeOfAllGames){
         bestTimeOfAllGames = bestTime;
-        document.getElementById("btoag").innerHTML = bestTimeOfAllGames;
+        document.getElementById("btoag").innerHTML = bestTimeOfAllGames + " ms";
     }
 }
 
 function sendActualTime(){
     let i = outcome.length;
-    document.getElementById("art").innerHTML = outcome[i-1];
+    document.getElementById("art").innerHTML = outcome[i-1] + " ms";
 }
 
 function resetActualStats(){
-    document.getElementById("art").innerHTML = 0.0;
-    document.getElementById("bt").innerHTML = 0.0;
-    document.getElementById("at").innerHTML = 0.0;
+    document.getElementById("art").innerHTML = 0.0 + " ms";
+    document.getElementById("bt").innerHTML = 0.0 + " ms";
+    document.getElementById("at").innerHTML = 0.0 + " ms";
+}
+
+function submitButton(){
+    var x = parseInt(document.getElementById("myText").value);
+    if(Number.isInteger(x))
+    {
+        numberOfTries = x;
+    } else{
+        alert("Please pass valid number (Int)")
+    }
+    console.log(x);
 }
