@@ -38,15 +38,14 @@ function stop(){
     let gs = document.getElementsByClassName("game_square")[0];
     start_button.innerHTML = "START";
     doc.style.visibility = 'visible';
-    doc.innerHTML = "Prepare yourself, be fast"
+    doc.innerHTML = "Press button when it turns red."
     gs.style.visibility = 'hidden'; 
     isGameRunning = false;
     
 }
 
 async function startGame(){
-    if(doNothing == 1){        
-        ;
+    if(doNothing == 1){
         let start_button = document.getElementsByClassName("start-stop-button")[0];
         let doc = document.getElementById("Countdown");
         let gs = document.getElementsByClassName("game_square")[0];
@@ -104,6 +103,7 @@ function pushButton(){
             changeColorInRandSec();       
         }
     }else{
+        alert("Too fast! Added 1s as a penalty")
         console.log("Too fast! Penalty applied");
         outcome.push(1000);
     }
